@@ -32,17 +32,6 @@ function createItem(text) {
         // Add container to the list
         list.appendChild(newItemContainer);
         list.classList.add('active-list')
-        
-        // Add event listener to delete btn
-        const allDeleteBtns = document.querySelectorAll('.delete-btn');
-        allDeleteBtns.forEach((btn) => {
-            // btn.addEventListener('click', () => {
-            //     deleteContainer(btn);
-            //     if (list.childElementCount == 0) {
-            //         list.classList.remove('active-list')
-            //     }
-            // });
-        });
     }
 }
 
@@ -51,13 +40,6 @@ function deleteContainer (element) {
     const container = element.parentElement;
     container.remove();
 }
-
-addBtn.addEventListener('click', run);
-window.addEventListener('keypress', (e) => {
-    if (e.key == 'Enter'){
-        run();
-    }
-});
 
 function deleteBtn() {
     const allDeleteBtns = document.querySelectorAll('.delete-btn');
@@ -70,3 +52,10 @@ function deleteBtn() {
         });
     });
 }
+
+addBtn.addEventListener('click', run);
+window.addEventListener('keypress', (e) => {
+    if (e.key == 'Enter'){
+        run();
+    }
+});
