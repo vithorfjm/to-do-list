@@ -109,6 +109,20 @@ img {
 
 @media (max-width: 600px) {
     input {
+        width: 450px;
+    }
+
+    .list {
+        width: 490px;
+    }
+
+    main p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    input {
         width: 305px;
     }
 
