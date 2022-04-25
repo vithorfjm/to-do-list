@@ -106,3 +106,17 @@ img {
     background-color: #3FA13F;
     border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+    input {
+        width: 305px;
+    }
+
+    .list {
+        width: 345px;
+    }
+
+    main p {
+        font-size: .9rem;
+    }
+}
