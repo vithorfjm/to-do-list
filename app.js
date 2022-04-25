@@ -21,8 +21,8 @@ function createItem(text) {
         const deleteBtn = document.createElement('button');
         const btnX = document.createTextNode('x');
         deleteBtn.appendChild(btnX);
-        deleteBtn.classList.add('delete-btn')
-        
+        deleteBtn.classList.add('delete-btn');
+
         // Create container for item and delete btn
         const newItemContainer = document.createElement('div');
         newItemContainer.appendChild(addedItem);
@@ -31,7 +31,12 @@ function createItem(text) {
         
         // Add container to the list
         list.appendChild(newItemContainer);
-        list.classList.add('active-list')
+        list.classList.add('active-list');
+
+        // Add event to each item on list
+        newItemContainer.addEventListener('click', () => {
+            newItemContainer.classList.toggle('checked-item')
+        });
     }
 }
 
